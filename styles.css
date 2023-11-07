@@ -1,0 +1,155 @@
+/*
+ * Copyright © 2023 Joe Smullen
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+*/
+
+/* optimise for mobile */
+@media only screen and (max-width: 600px) {
+    body {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+/* optimise for desktop */
+@media only screen and (min-width: 600px) {
+    body {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+/* universal settings */
+body {
+    background: lightblue;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+button {
+    background: gold;
+    outline: 2px solid black;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+
+input {
+    margin-top: 10px;
+}
+
+/* divs */
+.pyramid {
+    /* making the -20% 0 makes the top part a triangle, but it's too narrow */
+    /* i can't be bothered finding out how to fix it at this point */
+    clip-path: polygon(50% -20%, 100% 100%, 0% 100%);
+}
+
+.pyramid button {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#ages {
+    margin-bottom: 30px;
+}
+
+/* over 5's are "selected" by default */
+#over5 {
+    outline: 4px solid black;
+}
+
+#input {
+    margin-top: 30px;
+}
+
+#sugary {
+    background: red;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 15px;
+}
+
+#fats {
+    background: darkorange;
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 15px;
+}
+
+#protein {
+    background: gold;
+    height: 70px;
+    line-height: 70px;
+}
+
+#dairy {
+    background: deepskyblue;
+    height: 80px;
+    line-height: 80px;
+}
+
+#carbs {
+    background: chocolate;
+    height: 90px;
+    line-height: 90px;
+}
+
+#fruits {
+    background: mediumseagreen;
+    height: 100px;
+    line-height: 100px;
+}
+
+/* make the counts fit inside their respective shelves */
+#count5 {
+    margin-top: -50px;
+}
+
+#count4 {
+    margin-top: -60px;
+}
+
+#count3 {
+    margin-top: -70px;
+}
+
+#count2 {
+    margin-top: -80px;
+}
+
+#count1 {
+    margin-top: -90px;
+}
+
+#count0 {
+    margin-top: -100px;
+}
+
+/* lighter colours on hover */
+#sugary:hover {
+    background: #ff4d4d;
+}
+
+#fats:hover {
+    background: #ffa333;
+}
+
+#protein:hover {
+    background: #ffe44d;
+}
+
+#dairy:hover {
+    background: #4dd2ff;
+}
+
+#carbs:hover {
+    background: #e27e36;
+}
+
+#fruits:hover {
+    background: #53c687;
+}
