@@ -24,8 +24,7 @@ function changeCount(button, num) {
     if (button === "inc") {
         servings[num]++;
         changeHeights(button, num);
-    }
-    else if (button === "dec") {
+    } else if (button === "dec") {
         servings[num]--;
         changeHeights(button, num);
 
@@ -35,7 +34,7 @@ function changeCount(button, num) {
         }
     }
 
-    // quick hack to access the count{num} <p> elements (gotta love dynamic typing!)
+    // quick hack to access the count{num} <p> elements
     const countnum = "count" + num;
     const count = document.getElementById(countnum);
 
@@ -56,12 +55,24 @@ function changeCount(button, num) {
 function changeHeights(button, num) {
     let el = "";
     switch (num) {
-        case 0: el = "fruits"; break;
-        case 1: el = "carbs"; break;
-        case 2: el = "dairy"; break;
-        case 3: el = "protein"; break;
-        case 4: el = "fats"; break;
-        case 5: el = "sugary"; break;
+        case 0:
+            el = "fruits";
+            break;
+        case 1:
+            el = "carbs";
+            break;
+        case 2:
+            el = "dairy";
+            break;
+        case 3:
+            el = "protein";
+            break;
+        case 4:
+            el = "fats";
+            break;
+        case 5:
+            el = "sugary";
+            break;
     }
 
     const shelf = document.getElementById(el);
@@ -69,8 +80,7 @@ function changeHeights(button, num) {
     if (button === "inc") {
         const height = `${shelf.offsetHeight + 10}px`;
         shelf.style.height = height;
-    }
-    else if (button === "dec") {
+    } else if (button === "dec") {
         const height = `${shelf.offsetHeight - 10}px`;
         shelf.style.height = height;
 
